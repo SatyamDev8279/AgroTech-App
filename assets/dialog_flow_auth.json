@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "agrotechflutterbot-bian",
+  "private_key_id": "ffac919f48ad13a635db1a4030c81edd6c28c1de",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDEjOlAYM6euCbJ\nAFFtr19gnus9nM7KbIO18PMRnnVk235d4UKiYmPhib0hg7juyEnJU4akq91NbjcI\ngY/pHPtxJ15ZS5cYhC3YbU9nziI8c11VcHFrewJAuI5MGuTGLpaihlJYV6M1MjhH\noLz4UGvx8AHan4KyzES40D6UVhroyb7jixM46XQbEVcXNRd8kffwFm7b4bx1rME/\niaqXHiCAadG4n/JIwmci2HKlU7GxsugPkz9t3BKd4ycq7g/FlVS4WHS3ldyMCTrX\nytForOU5C5K4Ejg965X71WiyfWfm2XvorznF/18+TRDE58tpxHFGucol76ZS4e7S\nsycjsNDdAgMBAAECggEACvK4aWQbDj8+tdKFNqFepDCl9NQftqnNulw2BeS4MEqD\novIRtp7ZZm44MT43lmFkrsiuxsxl8tKxURF6dScuoFJrkHjD7VMrhJMuKZ+TS5+3\ncrNlNfHvobBGCNo0pQ9iR6JIwu/6wNNPzDmZXRGJubu/NrDM5G25ZDwBSFz1ecLu\nFqSXqSfmvvlPtGVfOP132cyVgLezw6Pn6ZyqIVuDe3iRksZD3fL5JHuVxVdzUR0u\nFtSXC5k6nKKEPniNUtmoAtJsNEG0a+GzZgRqJGUAtyJqWoeeaEed3FTSEfJOrgwe\n9Dtrvsj/e/zXmKvEfspDg4gyezTyETqpYk5fw8gaMQKBgQDlaqDPRH3IpDG6kP/R\nDyHlgRg1mkWNwzGAtiQUpKUIvkDB1unM6A1l1YOl9u3nMuYvnGfrBAS3Mk2DZ/a5\ndtqPFpay2UW7C+3bOb6qp0z3o7rWAQVFPhKTKA7SXX/xQzwMBvLvXf+Xv//FRmHG\nQrdZCADU9avI0BJj6rJ/JdqGuQKBgQDbU1llY1uVGjsvbTPLSyHSLZqWJ2cz09mj\nzP6EPQsb95gJFx/1U1Ls7uOGqgjBg7V1gzdCln4+2ld68sWzjHpnoKyupBQf2KtT\nS3NVKHOpRQKmsuo9lkTtXzYYwAxSUsWnray5VVQEty/5y39zmWAsoZ9TRWnj4VyG\nmH69gn4JRQKBgQDQkEt5os6nZX5AGio3KQar2tzjfkjVRCrw1KWgjr3qYOwGTRdo\nTV5AwgdZDk/h7AgQKKTgp1qSIY0Odal7mm2/v81o8tXN4l5u+uQ3yLjUOWlVvL/J\n31CLr9MptA7oizM/y+F3c4E1uDsSYZXp5CVDL19yO5Xcjizp4Sg9J3CvIQKBgBN1\n3s2/NiYRsMSxhNH59aNHhpriHiccGgiNrNug6vZtTqEn2x8SaJ47SBbvyV0aSaSG\nowWWgtci2nY/Skl3InlFaW0Jg/ubZwA6Bp68ux5+0BBoeZ5DUhRZyVwC1lULoRwS\nreu35X+RnYEljEZ+imkLYi6qTw34NhR/PWelR3edAoGBAOMVtkNfkwaWC1gG2CXg\n/KAkG9kbOicXc00Ro5+fXxnNya8CK77jdHzZTQVCOz01kAE84DTvNl5yRmPNtCHt\n1rMYWJPoSWxa7WSOkIZQoNhR2tGb49qw1SWHUZG8AVseHKetJ5r41EQWHeh6RNje\njTyNFqd7TQXTfWKXQShmjzsB\n-----END PRIVATE KEY-----\n",
+  "client_email": "atbot-641@agrotechflutterbot-bian.iam.gserviceaccount.com",
+  "client_id": "112055863701098488965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atbot-641%40agrotechflutterbot-bian.iam.gserviceaccount.com"
+}
