@@ -1,10 +1,10 @@
 # untitled
 
-A new Flutter project.
+This is a Flutter dart based Android Project that will help farmers and a normal person to get info about the crop or tree that can be grown with time.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run flutter pub-get to install the dependencies and then run it in the emulator.
 
 A few resources to get you started if this is your first Flutter project:
 
