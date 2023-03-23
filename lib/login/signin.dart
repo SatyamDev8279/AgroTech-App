@@ -10,16 +10,14 @@ import './register.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/widget/progerssDialog.dart';
 import 'package:untitled/screens/home_screen.dart';
+
 class Loginpage extends StatelessWidget {
   static const String idScreen = 'signin';
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
-   Loginpage({Key? key}) : super(key: key);
-
-
+  Loginpage({Key? key}) : super(key: key);
 
   @override
-
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
@@ -33,103 +31,106 @@ class Loginpage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  height :160,
+                  margin: EdgeInsets.symmetric(vertical: 20),
+                  height: 90,
                   child: Center(
                     child: Text('KrishiVikas',
                         style: GoogleFonts.lora(
-                      fontSize: 50,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white
-                    )),
+                            fontSize: 50,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white)),
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: 
-                  Column(
+                  child: Column(
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey[600]?.withOpacity(0.5),
-                          borderRadius: BorderRadius.circular(16)
-                        ),
+                            color: Colors.grey[600]?.withOpacity(0.5),
+                            borderRadius: BorderRadius.circular(16)),
                         child: TextField(
                           controller: emailTextEditingController,
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(vertical: 15),
-                            border: InputBorder.none,
-                            hintText: 'Email',
-                            prefixIcon: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 20 ),
-                              child: Icon(FontAwesomeIcons.solidEnvelope, size: 20, color: Colors.white,),
-                            ),
-                            hintStyle: GoogleFonts.merriweather(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                              color: Colors.white
-                            )
-                          ),
-                          keyboardType: TextInputType.emailAddress,
-                        ),
-                      ),
-                      SizedBox(height: 25,),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.grey[600]?.withOpacity(0.5),
-                            borderRadius: BorderRadius.circular(16)
-                        ),
-                        child: TextField(
-                          controller: passwordTextEditingController,
-                          decoration: InputDecoration(
-                              contentPadding: const EdgeInsets.symmetric(vertical: 20),
+                              contentPadding:
+                                  const EdgeInsets.symmetric(vertical: 15),
                               border: InputBorder.none,
-                              hintText: 'Password',
+                              hintText: 'Email',
                               prefixIcon: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 20 ),
-                                child: Icon(FontAwesomeIcons.lock, size: 20, color: Colors.white,),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Icon(
+                                  FontAwesomeIcons.solidEnvelope,
+                                  size: 20,
+                                  color: Colors.white,
+                                ),
                               ),
                               hintStyle: GoogleFonts.merriweather(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 25,
-                                  color: Colors.white
-                              )
-                          ),
+                                  color: Colors.white)),
+                          keyboardType: TextInputType.emailAddress,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.grey[600]?.withOpacity(0.5),
+                            borderRadius: BorderRadius.circular(16)),
+                        child: TextField(
+                          controller: passwordTextEditingController,
+                          decoration: InputDecoration(
+                              contentPadding:
+                                  const EdgeInsets.symmetric(vertical: 20),
+                              border: InputBorder.none,
+                              hintText: 'Password',
+                              prefixIcon: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Icon(
+                                  FontAwesomeIcons.lock,
+                                  size: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              hintStyle: GoogleFonts.merriweather(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                  color: Colors.white)),
                           obscureText: true,
                           keyboardType: TextInputType.visiblePassword,
                         ),
                       ),
-
                       Container(
-                        alignment: Alignment.centerRight,
-                        margin: EdgeInsets.only(
-                          right: width*0.05,
-                          top : height*0.0250
-                        ),
-                        width: width,
-
-                        child:  TextButton(
-                          onPressed: (){
-                            Navigator.pushNamedAndRemoveUntil(context, 'forgot', (route) => false);
-                          },
-                          child: Text("Forgot Password!" , style: GoogleFonts.basic(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          )
-                          ),
-
-                        )
+                          alignment: Alignment.centerRight,
+                          margin: EdgeInsets.only(
+                              right: width * 0.05, top: height * 0.0250),
+                          width: width,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, 'forgot', (route) => false);
+                            },
+                            child: Text("Forgot Password!",
+                                style: GoogleFonts.basic(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                )),
+                          )),
+                      SizedBox(
+                        height: 20,
                       ),
-                      SizedBox(height: 20,),
-                      ElevatedButton(style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(21)
-                        )
-                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.green,
+                            shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(21))),
 
                         //textColor: Colors.white,
                         child: Container(
@@ -139,84 +140,89 @@ class Loginpage extends StatelessWidget {
                             child: Text(
                               'LOGIN',
                               style: GoogleFonts.acme(
-                                fontSize: 20, fontWeight: FontWeight.bold ,
-                                color: Colors.white
-                              ),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ),
                           ),
                         ),
-                        onPressed: (){ if (!emailTextEditingController.text
-        .contains("@")) {
-    displayToastMessage(
-    "Email address is not valid", context);
-    } else if (passwordTextEditingController
-        .text.isEmpty) {
-    displayToastMessage("Password is empty", context);
-    } else {
-                          loginAndAuthenticateUser(context); Navigator.pushNamedAndRemoveUntil(context, 'home_screen', (route) => false);
-                        }
+                        onPressed: () {
+                          if (!emailTextEditingController.text.contains("@")) {
+                            displayToastMessage(
+                                "Email address is not valid", context);
+                          } else if (passwordTextEditingController
+                              .text.isEmpty) {
+                            displayToastMessage("Password is empty", context);
+                          } else {
+                            loginAndAuthenticateUser(context);
+                            Navigator.pushNamedAndRemoveUntil(
+                                context, 'home_screen', (route) => false);
+                          }
                         },
                       ),
                       Container(
                         alignment: Alignment.center,
                         margin: EdgeInsets.only(
-                            right: width*0.05,
-                            top : height*0.0250
-                        ),
+                            right: width * 0.05, top: height * 0.0250),
                         width: width,
-                        child: Text('OR',
+                        child: Text(
+                          'OR',
                           style: GoogleFonts.alegreya(
                               fontSize: 20,
                               color: Colors.white,
-                              fontStyle: FontStyle.normal
-                          ),
+                              fontStyle: FontStyle.normal),
+                        ),
                       ),
+                      SizedBox(
+                        height: 10,
                       ),
-                      SizedBox(height: 10,),
                       Container(
-                        width: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: OutlinedButton.icon(
-                                icon : Image(image: AssetImage('assets/images/logo google.png') , width : 30),
-                                onPressed: () {},
-                                label: Text('Sign in with Google' ,
-                                style: GoogleFonts.acme(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                )),
-                              ),
-                            )
-                          ],
-                        )
+                          width: double.infinity,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Center(
+                                child: OutlinedButton.icon(
+                                  icon: Image(
+                                      image: AssetImage(
+                                          'assets/images/logo google.png'),
+                                      width: 30),
+                                  onPressed: () {},
+                                  label: Text('Sign in with Google',
+                                      style: GoogleFonts.acme(
+                                        fontSize: 18,
+                                        color: Colors.white,
+                                      )),
+                                ),
+                              )
+                            ],
+                          )),
+                      SizedBox(
+                        height: 10,
                       ),
-                      SizedBox(height: 10,),
-                     TextButton(
-                       onPressed: (){
-                         Navigator.pushNamedAndRemoveUntil(context, 'register', (route) => false);
-                       },
-                     child: Text("Do not have an account? Click Here" , style: GoogleFonts.basic(
-                       fontSize: 15,
-                       fontWeight: FontWeight.bold,
-                       color: Colors.white,
-                     )
-                     ),
-                     )
-
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, 'register', (route) => false);
+                        },
+                        child: Text("Do not have an account? Click Here",
+                            style: GoogleFonts.basic(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )),
+                      )
                     ],
                   ),
                 ),
-
               ],
             ),
-
           ),
         )
       ],
     );
   }
+
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   void loginAndAuthenticateUser(BuildContext context) async {
     showDialog(
@@ -228,36 +234,36 @@ class Loginpage extends StatelessWidget {
           );
         });
     final User? firebaseUser = (await _firebaseAuth
-        .signInWithEmailAndPassword(
-        email: emailTextEditingController.text,
-        password: passwordTextEditingController.text)
-        .catchError((errMsg) {
+            .signInWithEmailAndPassword(
+                email: emailTextEditingController.text,
+                password: passwordTextEditingController.text)
+            .catchError((errMsg) {
       Navigator.pop(context);
       displayToastMessage("Error: " + errMsg.toString(), context);
     }))
         .user;
 
     if (firebaseUser != null) //user created
-        {
+    {
       //save user info to database
 
       userRef
           .child(firebaseUser.uid)
           .once()
           .then((value) => (DataSnapshot snap) {
-        if (snap.value != null) {
-          Navigator.pushNamedAndRemoveUntil(
-              context, home_screen.idScreen, (route) => false);
-          displayToastMessage(
-              "Congratulations, you are logged in", context);
-        } else {
-          Navigator.pop(context);
-          _firebaseAuth.signOut();
-          displayToastMessage(
-              "No record for this user. Please create an account.",
-              context);
-        }
-      });
+                if (snap.value != null) {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, home_screen.idScreen, (route) => false);
+                  displayToastMessage(
+                      "Congratulations, you are logged in", context);
+                } else {
+                  Navigator.pop(context);
+                  _firebaseAuth.signOut();
+                  displayToastMessage(
+                      "No record for this user. Please create an account.",
+                      context);
+                }
+              });
     } else {
       Navigator.pop(context);
       //error occured = display error msg
@@ -265,9 +271,7 @@ class Loginpage extends StatelessWidget {
       displayToastMessage("Error occured , cannot be signed in", context);
     }
   }
-
 }
-
 
 class BackgroundImage extends StatelessWidget {
   const BackgroundImage({
