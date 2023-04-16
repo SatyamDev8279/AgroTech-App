@@ -46,8 +46,7 @@ class BodyWidget extends StatelessWidget {
                   letterSpacing: 1,
                   fontSize: 24,
                   color: Colors.black,
-                  fontWeight: FontWeight.w600
-              ),
+                  fontWeight: FontWeight.w600),
             ),
           ),
           Text(
@@ -68,23 +67,28 @@ class BodyWidget extends StatelessWidget {
                       padding: MaterialStateProperty.all<EdgeInsets>(
                           const EdgeInsets.symmetric(horizontal: 20)),
                       backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.green),
+                          MaterialStateProperty.all<Color>(Colors.green),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius:
-                            BorderRadius.circular(50),
-                          ))),
-                  onPressed: (){
-    Navigator.pushNamedAndRemoveUntil(
-    context, 'signin', (route) => false);
-    },
+                        borderRadius: BorderRadius.circular(50),
+                      ))),
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, 'signin', (route) => false);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Text("Let's Go!" , style: TextStyle(
+                      Text(
+                        "Let's Go!",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_forward,
                         color: Colors.white,
-                      ),),
-                      Icon(Icons.arrow_forward , color: Colors.white,)
+                      )
                     ],
                   )),
             ),
@@ -114,8 +118,8 @@ class ImageWidget extends StatelessWidget {
             bottomLeft: Radius.circular(30),
           ),
           image: const DecorationImage(
-              image: AssetImage("assets/images/backwla.jpeg"), fit: BoxFit.cover)),
+              image: AssetImage("assets/images/backwla.jpeg"),
+              fit: BoxFit.cover)),
     );
   }
 }
-

@@ -9,7 +9,7 @@ import 'package:untitled/main.dart';
 import './register.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:untitled/widget/progerssDialog.dart';
-import 'package:untitled/screens/home_screen.dart';
+import 'package:untitled/screens/Home/home_screen.dart';
 
 class Loginpage extends StatelessWidget {
   static const String idScreen = 'signin';
@@ -54,14 +54,17 @@ class Loginpage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(16)),
                         child: TextField(
                           controller: emailTextEditingController,
+                          style: GoogleFonts.merriweather(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 20,
+                              color: Colors.limeAccent),
                           decoration: InputDecoration(
                               contentPadding:
                                   const EdgeInsets.symmetric(vertical: 15),
                               border: InputBorder.none,
                               hintText: 'Email',
-                              prefixIcon: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
+                              prefixIcon: const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20),
                                 child: Icon(
                                   FontAwesomeIcons.solidEnvelope,
                                   size: 20,
@@ -75,7 +78,7 @@ class Loginpage extends StatelessWidget {
                           keyboardType: TextInputType.emailAddress,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 25,
                       ),
                       Container(
@@ -84,14 +87,17 @@ class Loginpage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(16)),
                         child: TextField(
                           controller: passwordTextEditingController,
+                          style: GoogleFonts.merriweather(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 20,
+                              color: Colors.limeAccent),
                           decoration: InputDecoration(
                               contentPadding:
                                   const EdgeInsets.symmetric(vertical: 20),
                               border: InputBorder.none,
                               hintText: 'Password',
-                              prefixIcon: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 20),
+                              prefixIcon: const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 20),
                                 child: Icon(
                                   FontAwesomeIcons.lock,
                                   size: 20,

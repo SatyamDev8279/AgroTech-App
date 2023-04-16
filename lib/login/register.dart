@@ -4,16 +4,14 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled/main.dart';
-import 'package:untitled/screens/home_screen.dart';
+import 'package:untitled/screens/Home/home_screen.dart';
 import 'package:untitled/widget/progerssDialog.dart';
-
 
 class Register extends StatelessWidget {
   TextEditingController emailTextEditingController =
       new TextEditingController();
-  TextEditingController nameTextEditingController =
-      new TextEditingController();
-   TextEditingController phoneTextEditingController =
+  TextEditingController nameTextEditingController = new TextEditingController();
+  TextEditingController phoneTextEditingController =
       new TextEditingController();
   TextEditingController passwordTextEditingController =
       new TextEditingController();
@@ -61,8 +59,7 @@ class Register extends StatelessWidget {
                                     size: 25,
                                   ),
                                   hintStyle: GoogleFonts.merriweather(
-                                      fontSize: 22,
-                                      color: Colors.white),
+                                      fontSize: 22, color: Colors.white),
                                 ),
                                 keyboardType: TextInputType.text,
                                 textInputAction: TextInputAction.next,
@@ -88,7 +85,7 @@ class Register extends StatelessWidget {
                                   color: Colors.grey[600]?.withOpacity(0.5),
                                   borderRadius: BorderRadius.circular(16)),
                               child: TextField(
-                                controller: emailTextEditingController,
+                                  controller: emailTextEditingController,
                                   decoration: InputDecoration(
                                     contentPadding: const EdgeInsets.symmetric(
                                         vertical: 15),
@@ -100,8 +97,7 @@ class Register extends StatelessWidget {
                                       size: 25,
                                     ),
                                     hintStyle: GoogleFonts.merriweather(
-                                        fontSize: 22,
-                                        color: Colors.white),
+                                        fontSize: 22, color: Colors.white),
                                   ),
                                   keyboardType: TextInputType.emailAddress,
                                   textInputAction: TextInputAction.next),
@@ -138,9 +134,7 @@ class Register extends StatelessWidget {
                                     size: 25,
                                   ),
                                   hintStyle: GoogleFonts.merriweather(
-                                      fontSize: 22,
-
-                                      color: Colors.white),
+                                      fontSize: 22, color: Colors.white),
                                 ),
                                 keyboardType: TextInputType.phone,
                                 textInputAction: TextInputAction.next,
@@ -179,8 +173,7 @@ class Register extends StatelessWidget {
                                     size: 25,
                                   ),
                                   hintStyle: GoogleFonts.merriweather(
-                                      fontSize: 22,
-                                      color: Colors.white),
+                                      fontSize: 22, color: Colors.white),
                                 ),
                                 obscureText: true,
                                 keyboardType: TextInputType.visiblePassword,
@@ -219,10 +212,11 @@ class Register extends StatelessWidget {
                     ),
 
                     onPressed: () {
-                      if (nameTextEditingController.text.length<3) {
-                        displayToastMessage("name must be atleast of 3 characters", context);
-                      }
-                      else if (!emailTextEditingController.text.contains("@")) {
+                      if (nameTextEditingController.text.length < 3) {
+                        displayToastMessage(
+                            "name must be atleast of 3 characters", context);
+                      } else if (!emailTextEditingController.text
+                          .contains("@")) {
                         displayToastMessage(
                             "Email address is not valid", context);
                       } else if (phoneTextEditingController.text.isEmpty) {
@@ -236,26 +230,27 @@ class Register extends StatelessWidget {
                       } else {
                         registerNewUser(context);
                       }
-                      registerNewUser(context); Navigator.pushNamedAndRemoveUntil(context,'home_screen', (route) => false);
+                      registerNewUser(context);
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, 'home_screen', (route) => false);
                     },
                   ),
-
                   Container(
                     alignment: Alignment.center,
                     margin: EdgeInsets.only(
-                        right: width*0.05,
-                        top : height*0.0250
-                    ),
+                        right: width * 0.05, top: height * 0.0250),
                     width: width,
-                    child: Text('OR',
+                    child: Text(
+                      'OR',
                       style: GoogleFonts.alegreya(
                           fontSize: 20,
                           color: Colors.white,
-                          fontStyle: FontStyle.normal
-                      ),
+                          fontStyle: FontStyle.normal),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Container(
                       width: double.infinity,
                       child: Column(
@@ -263,9 +258,12 @@ class Register extends StatelessWidget {
                         children: [
                           Center(
                             child: OutlinedButton.icon(
-                              icon : Image(image: AssetImage('assets/images/logo google.png') , width : 30),
+                              icon: Image(
+                                  image: AssetImage(
+                                      'assets/images/logo google.png'),
+                                  width: 30),
                               onPressed: () {},
-                              label: Text('Sign in with Google' ,
+                              label: Text('Sign in with Google',
                                   style: GoogleFonts.acme(
                                     fontSize: 18,
                                     color: Colors.white,
@@ -273,21 +271,21 @@ class Register extends StatelessWidget {
                             ),
                           )
                         ],
-                      )
-                  ),
+                      )),
                   SizedBox(
                     height: 5,
                   ),
                   TextButton(
-                    onPressed: (){
-                      Navigator.pushNamedAndRemoveUntil(context, 'signin', (route) => false);
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, 'signin', (route) => false);
                     },
-                    child: Text("Already have an Account? Click Here" , style: GoogleFonts.basic(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    )
-                    ),
+                    child: Text("Already have an Account? Click Here",
+                        style: GoogleFonts.basic(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        )),
                   )
                 ],
               ),
@@ -343,12 +341,13 @@ class Register extends StatelessWidget {
 }
 
 displayToastMessage(String message, BuildContext context) {
-  Fluttertoast.showToast(msg: message,
-  toastLength: Toast.LENGTH_LONG,
-  timeInSecForIosWeb: 1,
-  backgroundColor: Colors.transparent,
-  textColor: Colors.white,
-  fontSize :14);
+  Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_LONG,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.transparent,
+      textColor: Colors.white,
+      fontSize: 14);
 }
 
 class BackgroundImage extends StatelessWidget {
